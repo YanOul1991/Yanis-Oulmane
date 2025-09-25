@@ -1,30 +1,41 @@
+@charset "UTF-8";
+
+/* 
+  Available fonts: 
+    - Google Sans Code
+    - Jersey 10
+    - Share Tech Mono
+*/
+
 :root{
   --theme-color-primary: #1A1C20;
-  --theme-color-secondary: #2E3A59;
+  --theme-color-secondary: #202b47;
   --theme-color-accent: #0bc5dd;
 
-  
   --text-color-main: #DADADA;
-  --text-title-font: "Jersey 10";
-  --text-title-size: 4rem;
-  --text-title-char-spacing: 0.1rem;
-  --text-title-weight: 100;
 
-  --text-main-content-font-primary: "Google Sans Code";
-  --text-main-content-font-secondary: "Share Tech Mono";
+  --main-titles-font-size: 4rem;
+  --main-titles-font-char-spacing: 0.1rem;
+  --main-titles-font-weight: 100;
+  --main-titles-font-family: "Jersey 10";
 
-  --nav-font-size: 0.75rem;
-  --nav-font-weight: 600;
+  --header-font-family: "Jersey 10";
+  
+  --header-socials-font-size: 1rem;
+
+  --header-nav-font-size: 1.25rem;
+  --header-nav-font-weight: 100;
+
+
+  --main-text-font: "Share Tech Mono";
+
 }
 
 body, *{
-  /* background-color: var(--theme-color-primary); */
   color: var(--text-color-main);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* width: 100vw; */
-  /* overflow-x: hidden; */
 }
 
 body{
@@ -32,8 +43,12 @@ body{
 }
 
 header{
-  background-color: var(--theme-color-secondary);
   color: var(--text-color-main);
+
+  font-family: var(--header-font-family);
+
+  background-color: var(--theme-color-secondary);
+  
   
   position: sticky;
   top: 0;
@@ -74,9 +89,9 @@ header > .header-section:nth-child(2){
 
 header > .header-section > a{
   color: var(--theme-color-accent);
-  font-size: var(--nav-font-size);
-  font-weight: var(--nav-font-weight);
-  letter-spacing: 0.08rem;
+  font-size: var(--header-nav-font-size);
+  font-weight: var(--header-nav-font-weight);
+  letter-spacing: 0.1rem;
   
   text-transform: uppercase;
   text-decoration: none;
