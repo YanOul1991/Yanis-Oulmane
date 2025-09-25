@@ -1,7 +1,0 @@
-:root{
-  --text-font-family: "Google Sans Code";
-}
-
-html{
-  font-family: var(--text-font-family);
-}
