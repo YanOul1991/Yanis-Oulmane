@@ -1,35 +1,10 @@
 @charset "UTF-8";
 
-/* 
-  Available fonts: 
-    - Google Sans Code
-    - Jersey 10
-    - Share Tech Mono
-*/
-
-:root{
-  --theme-color-primary: #1A1C20;
-  --theme-color-secondary: #202b47;
-  --theme-color-accent: #0bc5dd;
-
-  --text-color-main: #DADADA;
-
-  --main-titles-font-size: 4rem;
-  --main-titles-font-char-spacing: 0.1rem;
-  --main-titles-font-weight: 100;
-  --main-titles-font-family: "Jersey 10";
-
-  --header-font-family: "Jersey 10";
-  
-  --header-socials-font-size: 1rem;
-
-  --header-nav-font-size: 1.25rem;
-  --header-nav-font-weight: 100;
+@import "normalize.css";
+@import "variables.css";
+@import "header.css";
 
 
-  --main-text-font: "Share Tech Mono";
-
-}
 
 body, *{
   color: var(--text-color-main);
@@ -42,121 +17,113 @@ body{
   background-color: var(--theme-color-primary);
 }
 
-header{
-  color: var(--text-color-main);
-
-  font-family: var(--header-font-family);
-
-  background-color: var(--theme-color-secondary);
-  
-  
-  position: sticky;
-  top: 0;
-  height: 7.5vh;
-  padding: 10px;
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header > .header-section{
-  width: 33%;
-  height: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  column-gap: calc(2rem + 1vw);
-  padding: 0.25rem;
-
-  flex-grow: 0;
-  flex-shrink: 0;
-
-  /* border: 1px lime dotted; */
-
-}
-
-header > .header-section:nth-child(1),
-header > .header-section:nth-child(3){
-  flex-basis: 25%;
-}
-header > .header-section:nth-child(2){
-  flex-basis: 50%;
-}
-
-
-header > .header-section > a{
-  color: var(--theme-color-accent);
-  font-size: var(--header-nav-font-size);
-  font-weight: var(--header-nav-font-weight);
-  letter-spacing: 0.1rem;
-  
-  text-transform: uppercase;
-  text-decoration: none;
-  
-  /* border: 1px lime dotted; */
-  
-  text-align: center;
-  
-  height: 100%;
-  width: 15%;
-  
-  
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  
-  &:visited{
-    color: var(--theme-color-accent);
-  }
-}
-
-header > .header-section.navigation > a {
-  border: 1px var(--theme-color-accent) solid;
-  border-radius: 2px;
-}
-
-header > .header-section.navigation > a:hover
-{
-  background-color:#0bc5dd27;
-}
-
-header > .header-section.socials{
-  justify-content: right;
-  column-gap: 0;
-}
-
-header > .header-section.socials > a{
-  /* flex: 0; */
-  width: 100%;
-}
-
 main{
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-
-  margin: 15vh 0;
-
-  gap: 4rem 0;
+  margin: 5vh 0;
+  gap: 6rem 0;
 }
 
-main > section{
-  border: 1px lime dotted;
-  width: 90%;
+section.main-section{
+  width: 90vw;
 
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-}
 
-main > section#aboutme{
-  width: 50%;
   font-size: 1.5rem;
   line-height: 2.5rem;
+}
+
+h1.main-section-title {
+  width: 60vw;
+  font-family: var(--main-titles-font-family);
+  font-weight: var(--main-titles-font-weight);
+  color: var(--main-titles-font-color);
+}
+
+div.main-subsection{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+h2.main-subsection-title{
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-family: var(--subsection-title-font-family);
+}
+
+div.main-subsection-content{
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+div.main-subsection-content > 
+h3.main-subsection-title{
+  font-family: var(--subsection-title-font-family);
+}
+
+
+section#aboutme.main-section > 
+div.main-subsection >
+div.main-subsection-content >
+ul.grid-list {
+  width: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main > 
+section#aboutme.main-section > 
+div.main-subsection >
+div.main-subsection-content >
+ul.grid-list >
+li.grid-list-item {
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+  max-width: max-content;
+}
+
+main > 
+section#aboutme.main-section > 
+div.main-subsection >
+div.main-subsection-content >
+ul.grid-list >
+li.grid-list-item >
+svg {
+  width: 60px;
+  height: fit-content;
+  min-height: 70px;
+}
+
+main > 
+section#aboutme.main-section > 
+div.main-subsection >
+div.main-subsection-content >
+ul.grid-list >
+li.grid-list-item >
+h4.list-item-title {
+  font-family: var(--subsection-title-font-family);
+  font-size: 1.3rem;
+  height: max-content;
+  line-height: normal;
 }

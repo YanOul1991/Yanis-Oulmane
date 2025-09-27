@@ -1,0 +1,29 @@
+/* 
+  Available fonts: 
+    - Google Sans Code
+    - Jersey 10
+    - Share Tech Mono
+*/
+
+:root{
+  --theme-color-primary: #1A1C20;
+  --theme-color-secondary: #202b47;
+  --theme-color-accent: #0bc5dd;
+  --text-color-main: #DADADA;
+
+  --main-titles-font-size: 4rem;
+  --main-titles-font-char-spacing: 0.1rem;
+  --main-titles-font-weight: 100;
+  --main-titles-font-family: "Jersey 10";
+  --main-titles-font-color: rgb(172, 197, 243);
+
+
+  --header-font-family: "Jersey 10";
+  --header-socials-font-size: 1rem;
+  --header-nav-font-size: 1.25rem;
+  --header-nav-font-weight: 100;
+
+  --main-text-font: "Share Tech Mono";
+
+  --subsection-title-font-family: "Google Sans Code";
+}
