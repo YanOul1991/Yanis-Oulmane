@@ -1,0 +1,19 @@
+body, *{
+  color: var(--text-color-main);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--theme-color-primary);
+}
+
+main{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5vh 0;
+  gap: 6rem 0;
+}
