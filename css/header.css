@@ -20,7 +20,7 @@ header{
 header > 
 .header-section{
   width: 33%;
-  height: 100%;
+  height: 70%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -71,8 +71,8 @@ header > .header-section > a{
 }
 
 header > .header-section.navigation > a {
-  border: 1px var(--theme-color-accent) solid;
-  border-radius: 2px;
+  border: 2px var(--theme-color-accent) solid;
+  border-radius: 10px;
 }
 
 header > .header-section.navigation > a:hover

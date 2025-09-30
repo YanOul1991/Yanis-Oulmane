@@ -21,7 +21,34 @@ div.single-project-description{
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+  gap: 2rem;
+}
+
+ul.single-project-description-list-tech{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
+}
+
+li.single-project-description-list-tech-item {
+  width: 5rem;
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+li.single-project-description-list-tech-item > svg{
+  width: 80%;
+  height: fit-content;
 }
 
 div.single-project-gallery
@@ -56,7 +83,7 @@ svg.gallery-arrow-right{
 div.single-project-gallery-wrapper{
   position: relative;
 
-  max-width: 50vw;
+  max-width: 70vw;
   width: fit-content;
 
   aspect-ratio: 16 / 9;
