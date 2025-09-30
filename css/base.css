@@ -17,3 +17,7 @@ main{
   margin: 5vh 0;
   gap: 6rem 0;
 }
+
+ul{
+  list-style: none;
+}

@@ -1,3 +1,29 @@
+div.single-project{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+h1.single-project-title{
+  font-family: var(--main-text-font);
+  font-size: 4rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+div.single-project-description{
+  width: 50%;
+  font-family: "Google Sans Code";
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
 div.single-project-gallery
 {
   display: flex;
@@ -27,14 +53,13 @@ svg.gallery-arrow-right{
   right: 2rem;
 }
 
-ul.single-project-gallery-image{
+div.single-project-gallery-wrapper{
   position: relative;
 
   max-width: 50vw;
   width: fit-content;
 
-  aspect-ratio: 18 / 12;
-  /* border: 2px solid var(--theme-color-accent); */
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
 
   list-style: none;
@@ -46,14 +71,28 @@ ul.single-project-gallery-image{
   overflow: hidden;
 }
 
+ul.single-project-gallery-image{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  translate: 0 0;
+  transition: translate 500ms;
+
+  user-select: none;
+}
+
+
 li.single-project-gallery-image-item{
 
   padding: 2rem;
   width: 100%;
   min-width: 100%;
-
-  translate: -000% 0;
-
+  
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
