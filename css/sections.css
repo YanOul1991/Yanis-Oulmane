@@ -1,101 +1,211 @@
-section.main-section{
-  width: 90vw;
 
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-}
-
-h1.main-section-title {
-  width: 60vw;
-  font-family: var(--main-titles-font-family);
-  font-weight: var(--main-titles-font-weight);
-  color: var(--main-titles-font-color);
-}
-
-div.main-subsection{
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2rem;
-}
-
-h2.main-subsection-title{
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  font-family: var(--subsection-title-font-family);
-}
-
-div.main-subsection-content{
-  width: 60%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-}
-
-div.main-subsection-content > 
-h3.main-subsection-title{
-  font-family: var(--subsection-title-font-family);
-}
-
-
-section#aboutme.main-section > 
-div.main-subsection >
-div.main-subsection-content >
-ul.grid-list {
-  width: 100%;
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-main > 
-section#aboutme.main-section > 
-div.main-subsection >
-div.main-subsection-content >
-ul.grid-list >
-li.grid-list-item {
-  list-style: none;
+section.main-section-intro{
+  width: 50vw;
+  
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   
-  max-width: max-content;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  
+  gap: 5rem;
 }
 
-main > 
-section#aboutme.main-section > 
-div.main-subsection >
-div.main-subsection-content >
-ul.grid-list >
-li.grid-list-item >
-svg {
-  width: 60px;
-  height: fit-content;
-  min-height: 70px;
+h1.main-section-intro-title {
+  width: 80%;
+  font-family: var(--main-titles-font-family);
+  font-weight: var(--main-titles-font-weight);
+  color: var(--theme-color-accent);
 }
 
-main > 
-section#aboutme.main-section > 
-div.main-subsection >
-div.main-subsection-content >
-ul.grid-list >
-li.grid-list-item >
-h4.list-item-title {
-  font-family: var(--subsection-title-font-family);
-  font-size: 1.3rem;
-  height: max-content;
+div.main-subsection-intro{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h2.main-subsection-intro-title{
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
   line-height: normal;
+  padding: 0;
+  margin: 0;
+  font-family: var(--subsection-title-font-family);
 }
+
+div.main-subsection-intro-tech {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 3px solid white;
+  margin-top: 2rem;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+h3.main-subsection-intro-tech-title{
+  font-family: var(--subsection-title-font-family);
+}
+
+ul.main-section-intro-gallery-tech {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+li.main-section-intro-gallery-tech-item{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 125px;
+  height: 125px;
+
+  padding: 10px;
+
+  aspect-ratio: 1 / 1;
+}
+
+li.main-section-intro-gallery-tech-item > svg {
+  width: 90%;
+  height: fit-content;
+  aspect-ratio: 1 / 1;
+}
+
+h4.main-section-intro-gallery-tech-item-title{
+  font-family: var(--subsection-title-font-family);
+  /* color: black; */
+}
+
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+
+/* SECTION PROJETS */
+
+/* section.main-section-projects{
+  width: 50vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+h1.main-section-projects-title{
+  width: 100%;
+  font-family: var(--subsection-title-font-family);
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+p.main-section-projects-description{
+  width: 100%;
+  font-family: var(--subsection-title-font-family);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+article.main-section-projects-content{
+  width: 100%;
+}
+
+ul.main-section-projects-content-gallery{
+  width: 100%;
+  gap: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+li.main-section-projects-content-gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 30%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+a.main-section-projects-content-gallery-item-clickable{
+  width: 100%;
+  height: 100%;
+}
+
+div.main-section-projects-content-gallery-item-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+img.main-section-projects-content-gallery-item-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+h2.main-section-projects-content-gallery-item-title{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  translate: -50% 0;
+
+  font-family: var(--main-text-font);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+p.main-section-projects-content-gallery-item-description{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  width: 90%;
+
+  opacity: 0;
+  transition: opacity 500ms;
+
+  font-family: var(--main-text-font);
+  font-size: 1.25rem;
+}
+
+div.main-section-projects-content-gallery-item-wrapper::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  backdrop-filter: blur(0px);
+  background: rgba(0, 0, 0, 0);
+  transition-delay: 2000ms;
+  transition: backdrop-filter 200ms, background 200ms;
+}
+
+a.main-section-projects-content-gallery-item-clickable:hover 
+div.main-section-projects-content-gallery-item-wrapper::before{
+  backdrop-filter: blur(4px);
+  background: rgba(45, 32, 32, 0.457);
+}
+
+a.main-section-projects-content-gallery-item-clickable:hover 
+p.main-section-projects-content-gallery-item-description{
+  opacity: 1;
+} */

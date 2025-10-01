@@ -1,57 +1,96 @@
-ul.project-gallery{
-  list-style: none;
+section.main-section-projects{
+  width: 50vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
 
+h1.main-section-projects-title{
+  width: 100%;
+  font-family: var(--subsection-title-font-family);
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+p.main-section-projects-description{
+  width: 100%;
+  font-family: var(--subsection-title-font-family);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+article.main-section-projects-content{
+  width: 100%;
+}
+
+ul.main-section-projects-content-gallery{
+  width: 100%;
+  gap: 2rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: 3vw;
-  width: 75vw;
 }
 
-li.grid-list-item.project-gallery-card-item{
-  display: flex;
+li.main-section-projects-content-gallery-item {
   position: relative;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
   aspect-ratio: 1 / 1;
-  width: 25%;
-  min-width: 200px;
-
-  overflow: hidden;
+  width: 30%;
   border-radius: 10px;
+  overflow: hidden;
 }
 
-a.project-gallery-card-item-clickable{
-  position: relative;
-  /* border: 5px solid var(--theme-color-accent); */
+a.main-section-projects-content-gallery-item-clickable{
   width: 100%;
   height: 100%;
-  border-radius: 10px;
-  
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  text-decoration: none;
 }
 
-a.project-gallery-card-item-clickable:visited{
-  color: white;
-}
-
-div.project-gallery-card-item-image-wrapper{
-  position: relative;
-  overflow: hidden;
+div.main-section-projects-content-gallery-item-wrapper{
   width: 100%;
   height: 100%;
-  aspect-ratio: 1 / 1;
 }
 
-div.project-gallery-card-item-image-wrapper::before{
+img.main-section-projects-content-gallery-item-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+h2.main-section-projects-content-gallery-item-title{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  translate: -50% 0;
+
+  font-family: var(--main-text-font);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+p.main-section-projects-content-gallery-item-description{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  width: 90%;
+
+  opacity: 0;
+  transition: opacity 500ms;
+
+  font-family: var(--main-text-font);
+  font-size: 1.25rem;
+}
+
+/* Interactions */
+
+div.main-section-projects-content-gallery-item-wrapper::before{
   position: absolute;
   content: '';
   width: 100%;
@@ -59,54 +98,18 @@ div.project-gallery-card-item-image-wrapper::before{
   left: 0;
   bottom: 0;
   backdrop-filter: blur(0px);
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0, 1)); */
   background: rgba(0, 0, 0, 0);
   transition-delay: 2000ms;
   transition: backdrop-filter 200ms, background 200ms;
 }
 
-a.project-gallery-card-item-clickable:hover div.project-gallery-card-item-image-wrapper::before{
-  /* height: 25%; */
+a.main-section-projects-content-gallery-item-clickable:hover 
+div.main-section-projects-content-gallery-item-wrapper::before{
   backdrop-filter: blur(4px);
   background: rgba(45, 32, 32, 0.457);
 }
 
-img.project-gallery-card-item-image{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-}
-
-p.project-gallery-card-item-description{
-  width: 80%;
-  height: fit-content;
-  font-size: 1rem;
-  line-height: normal;
-  position: absolute;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  opacity: 0;
-
-  font-family: "Jersey 10";
-  font-size: 2rem;
-  letter-spacing: 0.1rem;
-
-  transition: opacity 200ms;
-}
-
-a.project-gallery-card-item-clickable:hover p.project-gallery-card-item-description{
+a.main-section-projects-content-gallery-item-clickable:hover 
+p.main-section-projects-content-gallery-item-description{
   opacity: 1;
-}
-
-h2.project-gallery-card-item-title{
-  position: absolute;
-  font-family: var(--main-text-font);
-  font-size: 4rem;
-  text-align: center;
-  background: black;
-  top: 10%;
-  text-transform: uppercase;
 }
