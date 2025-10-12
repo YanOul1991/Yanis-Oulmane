@@ -41,7 +41,7 @@ export default function App() {
   const socialsList = [
     {
       title: "LinkedIn",
-      link: "https://www.youtube.com/@MarvelRivals"
+      link: "https://www.linkedin.com/in/yanis-oulmane"
     },
     {
       title: "Github",
