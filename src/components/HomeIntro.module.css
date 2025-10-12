@@ -1,0 +1,20 @@
+.intro{
+  margin-top: 50px;
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  
+  align-self: center;
+}
+
+.intro_title{
+  font-size: 1.75rem;
+  padding: 10px;
+}
+
+.intro_description{
+  font-size: 1.75rem;
+}

@@ -1,0 +1,201 @@
+@keyframes move-left {
+  from {translate: 0, 0;}
+  to {translate: -100% 0;}
+}
+
+@keyframes move-right {
+  from {translate: 0, 0;}
+  to {translate: 100% 0;}
+}
+
+
+.slideshow{
+  position: relative;
+  width: 60%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  align-self: center;
+
+  margin-top: 50px;
+
+  aspect-ratio: 16 / 11;
+  
+}
+
+.slideshow_list {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  border: 7px solid transparent;
+  border-radius: 10px;
+
+  gap: 50px;
+
+  background: 
+    linear-gradient(to right, var(--theme-main-background-color), var(--theme-main-background-color)) padding-box,
+    linear-gradient(to right, #15d1d8, #198cb9) border-box;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  
+
+  overflow: hidden;
+}
+
+.slide_item {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+
+  padding: 10px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  translate: -100% 0;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.slide_item_img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius:20px;
+}
+
+.display {
+  translate: 0 0;
+}
+
+.slideshow_btn{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.247);
+
+    display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  > svg {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    height: auto;
+
+    path {
+      fill: rgba(255, 255, 255, 0.247);
+    }
+  }
+}
+
+.slideshow_btn:hover {
+  cursor: pointer;
+  border: 3px solid #ffffffff;
+
+  > svg > path{
+    fill: #ffffffff;
+  }
+}
+
+.slideshow_btn:nth-of-type(1){
+  left: 0;
+  top: 50%;
+  translate: -150% -50%;
+
+  > svg {
+    rotate: 180deg;
+  }
+}
+
+.slideshow_btn:nth-of-type(2){
+  right: 0;
+  top: 50%;
+  translate: 150% -50%;
+}
+
+
+/* =============== ANIMATIONS =============== */
+
+:root{
+  --transition-duration: 250ms
+}
+
+@keyframes exit-left {
+  from {translate: 0, 0;}
+  to {translate: -110% 0;}
+}
+
+@keyframes exit-right {
+  from {translate: 0, 0;}
+  to {translate: 110% 0;}
+}
+
+/* Enter from the left */
+@keyframes enter-left {
+  from {translate: -110% 0;}
+  to {translate: 0, 0;}
+}
+
+@keyframes enter-right {
+  from {translate: 110% 0;}
+  to {translate: 0, 0;}
+}
+
+.exit_left{
+  translate: 0 0;
+  animation-name: exit-left;
+  animation-duration: var(--transition-duration);
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.exit_right{
+  translate: 0 0;
+  animation-name: exit-right;
+  animation-duration: var(--transition-duration);
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.enter_left{
+  translate: 0 0;
+  animation-name: enter-left;
+  animation-duration: var(--transition-duration);
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.enter_right{
+  translate: 0 0;
+  animation-name: enter-right;
+  animation-duration: var(--transition-duration);
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
