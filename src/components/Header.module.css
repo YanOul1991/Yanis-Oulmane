@@ -1,0 +1,97 @@
+.header_logo {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+
+  flex: 0 1 20%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header_socials {
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+
+  flex: 1 1 20%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  gap: 10px;
+}
+
+.header_socials_link:hover{
+  color: #15d1d8;
+}
+
+
+.header_nav {
+  height: 100%;
+
+  flex: 0 1 60%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 25px;
+
+}
+
+.header_nav_link {
+  color: white;
+  width: 150px;
+  height: 1rem;
+  
+  background: 
+  linear-gradient(to right, var(--header-background), var(--header-background)) padding-box,
+  linear-gradient(to right, #15d1d8, #198cb9) border-box
+  ;
+  
+  font-size: 0.9rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  
+  border: 2px solid transparent;
+  border-radius: 10px;
+  
+  padding: 1rem 0;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+  position: relative;
+  z-index: 1;
+}
+
+.header_nav_link::before{
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #15d1d8, #198cb9) padding-box;
+  border-radius: 5px;
+
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+
+  transition: width 100ms;
+}
+
+.header_nav_link:hover::before{
+  width: 100%;
+}
+
+.header_nav_link:visited {
+  color: white
+}

@@ -1,0 +1,27 @@
+.card_list_container{
+  color: white;
+  width: max-content;
+  margin: 20px auto;
+  padding-top: 90px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+
+.card_list_title{
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.card_list{
+  width: 80vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}

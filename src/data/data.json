@@ -1,0 +1,200 @@
+{
+  "home-intro": "Finissant en Techniques d'int\u00e9gration multim\u00e9dia en recherche de stage, Je suis un grand amateur de programmation, de la 3D et de jeux vid\u00e9os. Je suis une personne curieuse, d\u00e9brouillarde et capable de travailler efficacement en \u00e9quipe. Mon d\u00e9sir d'apprendre et de cr\u00e9er sont des atouts que je souhaite mettre \u00e0 profit. ",
+  "icons": {
+    "blender": "public/icons/logo/blender-logo.svg",
+    "csharp": "public/icons/logo/csharp-logo.svg",
+    "css": "public/icons/logo/css-logo.svg",
+    "figma": "public/icons/logo/figma-logo.svg",
+    "html": "public/icons/logo/html-logo.svg",
+    "js": "public/icons/logo/js-logo.svg",
+    "maya": "public/icons/logo/maya-logo.svg",
+    "pt": "public/icons/logo/pt-logo.svg",
+    "unity": "public/icons/logo/unity-logo.svg"
+  },
+  "projects": {
+    "games": [
+      {
+        "slug": "game_hachiman",
+        "title": "Hachiman",
+        "techs": [
+          "unity",
+          "csharp"
+        ],
+        "videos": [
+          "url_video_1",
+          "url_video_2",
+          "url_video_3"
+        ],
+        "images": [
+          "projects/games/hachiman/hachiman_img_0.png",
+          "projects/games/hachiman/hachiman_img_1.png",
+          "projects/games/hachiman/hachiman_img_2.png",
+          "projects/games/hachiman/hachiman_img_3.png",
+          "projects/games/hachiman/hachiman_img_4.png",
+          "projects/games/hachiman/hachiman_img_5.png",
+          "projects/games/hachiman/hachiman_img_6.png",
+          "projects/games/hachiman/hachiman_img_7.png"
+        ],
+        "intro": {
+          "title": "Hachiman",
+          "paragraphs": [
+            "Hachiman est un projet de session r\u00e9alis\u00e9 en \u00e9quipe, avec des r\u00f4les attribu\u00e9s al\u00e9atoirement \u00e0 chaque membre. Ensemble, nous avons d\u00e9velopp\u00e9 un jeu d'action et de fantaisie inspir\u00e9 de la culture japonaise.",
+            "Notre \u00e9quipe a remport\u00e9 la premi\u00e8re place lors de l'exposition de jeux organis\u00e9e par notre programme en techniques d'int\u00e9gration multim\u00e9dia. Ce projet m'a permis de progresser en programmation tout en d\u00e9veloppant mes comp\u00e9tences en travail d'\u00e9quipe et en gestion de projet."
+          ]
+        },
+        "texts": [
+          {
+            "title": "Mon r\u00f4le dans l'\u00e9quipe",
+            "paragraphs": [
+              "J'ai \u00e9t\u00e9 directeur technique de notre \u00e9quipe, responsable de l'organisation du code pour \u00e9viter les probl\u00e8mes li\u00e9s aux scripts C#, ainsi que de la gestion du projet sur GitHub. J'ai \u00e9galement men\u00e9 des recherches et du d\u00e9veloppement sur des aspects techniques et particip\u00e9 \u00e0 la cr\u00e9ation de certains assets. ",
+              "J'ai personnellement impl\u00e9ment\u00e9 l'intelligence artificielle des ennemis et du boss, le syst\u00e8me de qu\u00eates, le syst\u00e8me de sauvegarde, la gestion des \u00e9v\u00e9nements du jeu et les effets sp\u00e9ciaux associ\u00e9s.",
+              "J'ai aussi contribu\u00e9 \u00e0 l'impl\u00e9mentation indirecte de plusieurs fonctionnalit\u00e9s. Apr\u00e8s avoir effectu\u00e9 des recherches pr\u00e9liminaires, j'ai d\u00e9l\u00e9gu\u00e9 certaines t\u00e2ches \u00e0 mes coll\u00e8gues, telles que la gestion des contr\u00f4les (clavier/souris et manettes Xbox/PlayStation), les interactions avec l'environnement, la programmation du joueur, et bien d'autres \u00e9l\u00e9ments."
+            ]
+          }
+        ],
+        "galleryText": "Jeu d'action et fantaisie cr\u00e9\u00e9e en \u00e9quipe sur Unity."
+      },
+      {
+        "slug": "game_venator",
+        "title": "Venator",
+        "techs": [
+          "unity",
+          "csharp"
+        ],
+        "videos": [
+          "url_video_1",
+          "url_video_2",
+          "url_video_3"
+        ],
+        "images": [
+          "projects/games/venator/venator_img_1.jpg",
+          "projects/games/venator/venator_img_2.jpg",
+          "projects/games/venator/venator_img_3.jpg",
+          "projects/games/venator/venator_img_4.jpg"
+        ],
+        "intro": {
+          "title": "Venator",
+          "paragraphs": [
+            "Venator est un jeu de plateforme 2D dans lequel le joueur doit atteindre un objectif tout en \u00e9vitant des ennemis qui patrouillent selon des sch\u00e9mas pr\u00e9cis, obligeant \u00e0 anticiper ses d\u00e9placements.",
+            "Il s'agit du premier projet Unity r\u00e9alis\u00e9 dans le cadre de mon programme, pour lequel j'ai enti\u00e8rement d\u00e9velopp\u00e9 le code et cr\u00e9\u00e9 la quasi-totalit\u00e9 du pixel art."
+          ]
+        },
+        "texts": null,
+        "galleryText": "Platformer 2D en pixel art r\u00e9alis\u00e9 dans Unity."
+      }
+    ],
+    "3d": [
+      {
+        "slug": "3d_masarai",
+        "title": "Masarai",
+        "techs": [
+          "maya",
+          "blender",
+          "substance"
+        ],
+        "videos": [],
+        "images": [
+          "projects/3d/masarai/img_1.jpg",
+          "projects/3d/masarai/img_2.jpg",
+          "projects/3d/masarai/img_3.png",
+          "projects/3d/masarai/img_4.png",
+          "projects/3d/masarai/img_5.png",
+          "projects/3d/masarai/img_6.png",
+          "projects/3d/masarai/img_7.png"
+        ],
+        "intro": {
+          "title": "Masarai",
+          "paragraphs": [
+            "Masarai est un personnage cr\u00e9\u00e9 dans le but d'\u00eatre optimis\u00e9 et export\u00e9 dans un jeu r\u00e9alis\u00e9 avec Unity.",
+            "Les contraintes donn\u00e9es avec ce projet ont \u00e9t\u00e9 d'avoir un maximum de 10 000 polygones, et de n'avoir qu'une seule image en 2048 x 2048 pour faire les UV et impl\u00e9menter les textures.",
+            "En plus de la mod\u00e9lisation, le personnage a \u00e9t\u00e9 aussi anim\u00e9 pour le jeu gr\u00e2ce \u00e0 de la retouche de mocap."
+          ]
+        },
+        "texts": null,
+        "galleryText": "Mod\u00e9lisation et animation d'un personnage 3D optimis\u00e9 pour le jeu."
+      },
+      {
+        "slug": "3d_vehicle",
+        "title": "V\u00e9hicule",
+        "techs": [
+          "maya",
+          "substance"
+        ],
+        "videos": [],
+        "images": [
+          "projects/3d/vehicle/img_1.jpg",
+          "projects/3d/vehicle/img_2.jpg",
+          "projects/3d/vehicle/img_3.jpg",
+          "projects/3d/vehicle/img_4.jpg",
+          "projects/3d/vehicle/img_5.jpg",
+          "projects/3d/vehicle/img_6.jpg"
+        ],
+        "intro": {
+          "title": "V\u00e9hicule",
+          "paragraphs": [
+            "Pour ce projet, j'ai mod\u00e9lis\u00e9 un v\u00e9hicule o\u00f9 l'objectif \u00e9tait que celui-ci a la forme d'un animal, et avec une source d'\u00e9nergie visible qui alimente l'engin.",
+            "J'ai opt\u00e9 pour faire un m\u00e9lange entre un avion et un faucon, dans un style l\u00e9g\u00e8rement futuriste, avec un cristal comme source d'\u00e9nergie visible sur la t\u00eate de l'animal.",
+            "Finalement, avec des co\u00e9quipiers avec lesquels une th\u00e9matique a \u00e9t\u00e9 choisie, nous avons r\u00e9alis\u00e9 une affiche mettant en valeur tous nos v\u00e9hicules."
+          ]
+        },
+        "texts": null,
+        "galleryText": "Cr\u00e9ation d'un v\u00e9hicule ayant la form d'un animal."
+      },
+      {
+        "slug": "3d_talisman",
+        "title": "Talisman",
+        "techs": [
+          "maya"
+        ],
+        "videos": [],
+        "images": [
+          "projects/3d/talisman/img_1.jpg",
+          "projects/3d/talisman/img_2.jpg",
+          "projects/3d/talisman/img_3.jpg",
+          "projects/3d/talisman/img_4.jpg",
+          "projects/3d/talisman/img_5.jpg",
+          "projects/3d/talisman/img_6.png"
+        ],
+        "intro": {
+          "title": "Talisman",
+          "paragraphs": [
+            "Le talisman est un projet dans lequel l'objectif \u00e9tait de cr\u00e9er un accessoire pour un personnage invent\u00e9, et o\u00f9 une source d'\u00e9nergie alimentant cet objet est mise en valeur.",
+            "Ma r\u00e9alisation \u00e9tait dans la th\u00e9matique futuriste avec le talisman qui appartient \u00e0 un personnage \u00e9tant un android.",
+            "Le but premier de ce projet \u00e9tait d'abord de comprendre et d\u00e9velopper l'importance de la lumi\u00e8re dans les r\u00e9alisations 3D."
+          ]
+        },
+        "texts": null,
+        "galleryText": "Mod\u00e9lisation d'un artefact pour un personnage fictif dans une th\u00e9matique futuriste."
+      }
+    ],
+    "web": [
+      {
+        "slug": "fandom_remake",
+        "title": "Refonte d'un site web",
+        "techs": [
+          "html",
+          "css",
+          "javascript",
+          "figma"
+        ],
+        "videos": [],
+        "images": [
+          "projects/web/fandom/img_1.png",
+          "projects/web/fandom/img_2.png",
+          "projects/web/fandom/img_3.png",
+          "projects/web/fandom/img_4.png",
+          "projects/web/fandom/img_5.png"
+        ],
+        "intro": {
+          "title": "Refonte site web Fandom",
+          "paragraphs": [
+            "Le projet de la refonte d'un site web consistait \u00e0 cr\u00e9er un nouveau design gr\u00e2ce \u00e0 Figam et \u00e0 apporter des modifications suite \u00e0 une s\u00e9rie de tests utilisateurs.",
+            "Suite \u00e0 cela-la maquette a \u00e9t\u00e9 refaite en code HTML, CSS et JavaScript, tout en s'assurant que le tout soit adaptatif en mobile et desktop, et a plusieurs tailles d'appareils diff\u00e9rents."
+          ]
+        },
+        "texts": null,
+        "galleryText": "Projet de refonte de l'interface du site web de Fandom."
+      }
+    ]
+  }
+}
