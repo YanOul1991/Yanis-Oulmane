@@ -1,7 +1,11 @@
 :root{
-  --theme-main-background-color: rgb(7, 18, 41);
+  --theme-main-background-color: #1b1d24;
   --theme-font-primary: Arial, Helvetica, sans-serif;
   --header-background: rgb(25, 51, 107);
+
+  --font-subtitle: "Press Start 2P", system-ui;
+  --font-title: "VT323", monospace;
+  --font-paragraph: "Rubik", sans-serif;
 }
 
 body{
@@ -20,6 +24,7 @@ body{
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+  gap: 100px;
 }
 
 a{

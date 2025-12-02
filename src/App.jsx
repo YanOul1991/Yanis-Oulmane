@@ -50,14 +50,16 @@ export default function App() {
   ]
   
   return (
-    <BrowserRouter basename="/Yanis-Oulmane/">
-      <Header nav={navList} socials={socialsList} />
-      <ScrollToHash />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter basename="/Yanis-Oulmane/">
+        <Header nav={navList} socials={socialsList} />
+        <ScrollToHash />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
