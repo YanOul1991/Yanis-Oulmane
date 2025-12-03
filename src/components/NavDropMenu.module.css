@@ -1,0 +1,69 @@
+.nav_drop_menu {
+  position: relative;
+
+  width: 150px;
+  height: 50px;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  
+  font-family: var(--font-title);
+  font-size: 1rem;
+
+  background: 
+  linear-gradient(to right, var(--header-background), var(--header-background)) padding-box,
+  linear-gradient(to right, #15d1d8, #198cb9) border-box;
+  border: 2px solid transparent;
+}
+
+.drop_menu_item_container{
+  position: absolute;
+
+  bottom: 0;
+
+  z-index: -1;
+  translate: 0 100%;
+
+  width: inherit;
+  height: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+
+  transition: all 150ms;
+}
+
+.nav_drop_menu:hover .drop_menu_item_container,
+.drop_menu_item_container:hover {
+  height: 150px;
+}
+
+.drop_menu_item {
+  font-size: 1.25rem;
+  font-family: var(--font-title);
+
+  background: 
+  linear-gradient(to right, var(--header-background), var(--header-background)) padding-box,
+  linear-gradient(to right, #15d1d8, #198cb9) border-box;
+  border: 1px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+
+  height: 3rem;
+  width: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop_menu_item:hover {
+  color: cyan;
+}
