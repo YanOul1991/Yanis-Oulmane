@@ -1,10 +1,10 @@
 .intro{
-  margin-top: 50px;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+
   gap: 5px;
   
   align-self: center;
@@ -12,10 +12,20 @@
 
 .intro_title{
   font-family: "VT323", monospace;
-  font-size: 1.65rem;
+  font-size: 1.25rem;
   padding: 10px;
 }
 
 .intro_description{
   font-size: 1.75rem;
+}
+
+@media screen and (min-width: 993px) {
+  .intro{
+    width: 70%;
+  }
+
+  .intro_title{ 
+    font-size: 1.75rem;
+  }
 }

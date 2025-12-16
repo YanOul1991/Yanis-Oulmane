@@ -1,3 +1,12 @@
+/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    +++ main.jsx
+      ++ Project main component.
+
+    +++ Yanis Oulmane
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App'

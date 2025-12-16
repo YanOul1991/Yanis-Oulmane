@@ -1,15 +1,27 @@
+/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    +++ Project.jsx
+      ++ Single project page style.
+
+    +++ Yanis Oulmane
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */
+
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ProjectData from "../data/data.json";
 import SlideshowImg from "../components/SlideshowImg";
 import style from "./Project.module.css";
-import { useEffect } from "react";
 
 export default function Project() {
   const location = useLocation();
   const queryParam = new URLSearchParams(location.search);
+
+  // Get project category and id from query
   const category = queryParam.get("c");
   const id = queryParam.get("id");
 
+  // Try to get corresponding prject
   const _proj_list = ProjectData["projects"][category];
 
   var _target_project;
@@ -25,7 +37,7 @@ export default function Project() {
   document.querySelector("title").innerHTML = `Yanis Oulmane | ${_target_project["title"]}`
 
   return (
-    <main className={style.project_main_content}>
+    <main className={style.project_main_content}> 
       <div className={style.project_intro_section}>
         <h1 className={style.project_title}>{_target_project["intro"]["title"]}</h1>
         <ul className={style.project_intro_paragraphs}>

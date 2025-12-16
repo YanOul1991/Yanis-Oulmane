@@ -1,4 +1,11 @@
-// 404 not found page
+/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    +++ NotFound.jsx
+      ++ 404 page
+
+    +++ Yanis Oulmane
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */
 
 export default function NotFound() {
   return(

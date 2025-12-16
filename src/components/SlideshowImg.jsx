@@ -1,3 +1,14 @@
+/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    +++ Slideshow.jsx
+      ++  Component for displaying project images 
+          in the form of a slideshow.
+
+    +++ Yanis Oulmane
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */
+
+
 import style from "./SlideshowImg.module.css"
 import React, { useState, useEffect } from "react"
 

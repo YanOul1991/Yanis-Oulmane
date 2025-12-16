@@ -1,9 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react'
+/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    +++ Card.jsx
+      ++  Single card component to display inside of 
+          a CardList component
+
+    +++ Yanis Oulmane
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */
+
+// import React, { useEffect, useRef, useState } from 'react'
 import styles from "./Card.module.css"
 import { Link } from 'react-router-dom';
 
 export default function Card({title, videos, thumbnail, intro, texts, queryString, galleryText}){
-  const [isHovered, setHovered] = useState(false);
+  // const [isHovered, setHovered] = useState(false);
 
   const items = [];
   const count = 64;
@@ -28,7 +38,7 @@ export default function Card({title, videos, thumbnail, intro, texts, queryStrin
           )
         })}
       </span>
-      <li className={styles.card}>
+      <li className={styles.card_info}>
         <h1 className={styles.card_title}>{title}</h1>
         <p className={styles.card_description}>{galleryText}</p>
         <div className={styles.card_img_container}>

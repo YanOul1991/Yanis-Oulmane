@@ -1,58 +1,76 @@
-import { useState, useEffect } from "react";
+/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    +++ Header.jsx
+      ++ Website header component.
+
+    +++ Yanis Oulmane
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */
+
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import NavMenu from "./NavigationMenu";
 import style from "./Header.module.css"
-import NavDropMenu from "./NavDropMenu";
+import { useMenu } from "../contexts/MenuContext";
 
 export default function Header({ nav, socials }) {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [width, setWidth] = useState(window.innerWidth);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Detect scroll up or down to display and hide header.
-  // If at less than 50px at top of page, assume scroll up to display
-  // header.
+  const { isOpen, setIsOpen } = useMenu();
+
   useEffect(() => {
-    const handleScroll = () => {
+    const onScroll = () => {
       const scroll = window.scrollY;
       setScrollDirection((scroll < lastScrollY || scroll < 50) ? "up" : "down");
       setLastScrollY(scroll);
     };
-    window.addEventListener("scroll", handleScroll);
-    return() => { window.removeEventListener("scroll", handleScroll)};
+
+    const onResize = () => {
+      setWidth(window.innerWidth)
+      console.log(`Window has been resized. New size ${width}`);
+    };
+
+    window.addEventListener("resize", onResize);
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+    };
   }, [lastScrollY])
 
   return (
     <header className={`${scrollDirection != null ? scrollDirection : "up"}`}>
-      <Link className={style.header_logo} to={"/#root"}>Yanis Oulmane</Link>
-      {/* <nav className={style.header_nav}>
-        {nav &&
-          nav.map((element, index) => (
-            element.title && element.path &&
-            <Link
-              className={style.header_nav_link}
-              key={index}
-              to={element.path}
-              >{element.title}</Link>
-          ))}
-      </nav> */}
-      {/* <div className={style.header_socials}>
-        <h1 className={style.header_menu_drop_title}>Social</h1>
-        {socials && 
-          socials.map((element, index) => (
-            <a className={style.header_socials_link} key={index} href={element.link}>{element.title}</a>
-        ))}
-      </div> */}
-      <nav className={style.nav_menus}>
-        <NavDropMenu 
-          local={true} 
-          listTitle={"Nav"} 
-          listElements={nav}>
-        </NavDropMenu>
-        <NavDropMenu
-          local={false}
-          listTitle={"Social"}
-          listElements={socials}
-        ></NavDropMenu>
-      </nav>
+      <div className={style.header_container}>
+        <Link onClick={() => (setIsOpen(false))} className={style.header_logo} to={"/#root"}>Yanis Oulmane</Link>
+        {width < 993 ?
+          <div className={`${style.menu_button} ${isOpen ? "open" : "close"}`} onClick={() => (setIsOpen(!isOpen))}>
+            <span style={isOpen ? { top: "50%" } : { top: "0%" }}></span>
+            <span style={{ top: "50%", translate: "0 -50%" }}></span>
+            <span style={isOpen ? { bottom: "50%" } : { bottom: "0%" }}></span>
+          </div> :
+          null
+        }
+        <nav className={`${style.nav_menus} ${width < 993 ? isOpen ? style.open : '' : ''}`}>
+          <div className={style.nav_container}>
+            <NavMenu
+              local={true}
+              listTitle={"Nav"}
+              listElements={nav}
+              type={"nav"}
+            ></NavMenu>
+            <NavMenu
+              local={false}
+              listTitle={"Social"}
+              listElements={socials}
+              type={"socials"}
+            ></NavMenu>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }

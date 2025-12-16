@@ -1,4 +1,11 @@
-// Home page 
+/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    +++ Home.jsx
+      ++ Home page structure.
+
+    +++ Yanis Oulmane
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */
 
 import CardList from "../components/CardList";
 import HomeIntro from "../components/HomeIntro"
@@ -12,11 +19,11 @@ export default function Home() {
   document.querySelector("title").innerHTML = `Yanis Oulmane`
 
   return (
-    <>
+    <main className="main_content">
       <HomeIntro title={Data["home-intro"]} description={null} />
       <CardList title={"Projets jeu"} data={_projects_game} category={"games"} hash={"games"} />
       <CardList title={"Projets 3D"} data={_projects_3d} category={"3d"} hash={"model"} />
       <CardList title={"Projets web"} data={_projects_web} category={"web"} hash={"web"} />
-    </>
+    </main>
   );
 }

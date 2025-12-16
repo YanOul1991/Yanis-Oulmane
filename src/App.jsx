@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
 import NotFound from "./pages/NotFound";
+import { MenuProvider, useMenu } from "./contexts/MenuContext";
 
 function ScrollToHash() {
   const { hash } = useLocation();
@@ -52,7 +53,9 @@ export default function App() {
   return (
     <>
       <BrowserRouter basename="/Yanis-Oulmane/">
+      <MenuProvider>
         <Header nav={navList} socials={socialsList} />
+      </MenuProvider>
         <ScrollToHash />
         <Routes>
           <Route path="/" element={<Home />} />

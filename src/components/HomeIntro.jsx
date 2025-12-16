@@ -1,3 +1,12 @@
+/* ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    +++ HomeIntro.jsx
+      ++ Intro section for home page component
+
+    +++ Yanis Oulmane
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; */
+
 import style from "./HomeIntro.module.css"
 
 export default function HomeIntro({ title, description }) {

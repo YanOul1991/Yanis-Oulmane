@@ -1,18 +1,12 @@
 .card_list_container{
   color: white;
-  width: max-content;
-  margin: 20px auto;
+  width: 100%;
 
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 50px;
-
-  max-width: 1200px;
-  margin: 50px auto;
-
-  /* border: 2px dashed red; */
+  gap: 10px;
 
   position: relative;
 }
@@ -26,13 +20,23 @@
   max-width: 200px;
   aspect-ratio: 1 / 1;
   
-  clip-path: polygon(
+  /* clip-path: polygon(
     0 0, 
     calc(50% + var(--decoration)) 0, 
     50% var(--decoration),
     var(--decoration) var(--decoration),
     var(--decoration) 50%,
     0 calc(50% + var(--decoration)),
+    0 0
+    ); */
+
+  clip-path: polygon(
+    0 0, 
+    calc(50%) 0, 
+    50% var(--decoration),
+    var(--decoration) var(--decoration),
+    var(--decoration) 50%,
+    0 calc(50%),
     0 0
     );
 
@@ -50,17 +54,24 @@
 .card_list_decoration:nth-child(2) {
   bottom: 0;
   right: 0;
-
+  
   background:
     linear-gradient(to right bottom, rgb(16, 199, 223), rgb(22, 60, 116));
-  clip-path: polygon(
+  /* clip-path: polygon(
     100% 100%,
     calc(50% - var(--decoration)) 100%,
     50% calc(100% - var(--decoration)),
     calc(100% - var(--decoration)) calc(100% - var(--decoration)),
     calc(100% - var(--decoration)) calc(50%),
     100% calc(50% - var(--decoration))
-  );
+  ); */
+  clip-path: polygon(
+      100% 100%,
+      calc(50%) 100%,
+      50% calc(100% - var(--decoration)),
+      calc(100% - var(--decoration)) calc(100% - var(--decoration)),
+      calc(100% - var(--decoration)) calc(50%),
+      100% calc(50%));
 }
 
 .card_list_container:hover .card_list_decoration {
@@ -69,7 +80,7 @@
 
 .card_list_title{
   font-family: var(--font-subtitle);
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
 
@@ -77,12 +88,23 @@
 }
 
 .card_list{
-  width: 80vw;
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
+  margin: 50px;
+}
 
-  margin: 100px;
+@media screen and (min-width: 993px) {
+  .card_list_container {
+    width: 70%;
+  }
+
+  .card_list {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
