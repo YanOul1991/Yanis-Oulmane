@@ -10,24 +10,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import style from "./NavigationMenu.module.css";
+
 import { useMenu } from "../contexts/MenuContext";
 
 export default function NavMenu({ local, listTitle, listElements, type }) {
-  const [width, setWidth] = useState(window.innerWidth);
   const { isOpen, setIsOpen } = useMenu();
-
-  useEffect(() => {
-    const onResize = () => {
-      setWidth = window.innerWidth;
-    }
-
-    window.addEventListener("resize", onResize);
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-    };
-  })
-
+  
   return (
     <div className={type === "nav" ? style.navigation_list : style.socials_list}>
       {local ?
