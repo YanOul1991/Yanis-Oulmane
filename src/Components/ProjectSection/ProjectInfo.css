@@ -1,0 +1,57 @@
+.project_info_wrp {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.project_info_wrp:last-of-type {
+  margin-top: 10rem;
+}
+
+.project_name {
+  color: #0060ce;
+
+  font-size: 1.5rem;
+  font-family: 'Recursive';
+  font-weight: 900;
+
+  margin-bottom: 1rem;
+}
+
+
+.project_used_techs {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  gap: 0.5rem;
+}
+
+.project_used_techs_label {
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+
+.project_used_techs_list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.project_used_techs_list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.project_used_tech:not(:last-child)::after {
+  margin-right: 0.5rem;
+  content: ',';
+}
+
+.project_desc {
+  font-size: 1.1rem;
+}
+
+.project_desc span {
+  font-weight: 900;
+  color: #0060ce;
+}

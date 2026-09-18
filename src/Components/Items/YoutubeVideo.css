@@ -1,0 +1,22 @@
+.ytb_video {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.ytb_video_label {
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: 'Recursive monospace';
+}
+
+.ytb_video_iframe_wrp {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}

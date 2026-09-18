@@ -1,0 +1,144 @@
+.navbar_display_wrp {
+  position: absolute;
+  width: 100svw;
+  height: calc(100svh - var(--size-height-header));
+  top: var(--size-height-header);
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  background: #010e18;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5rem;
+  /* backdrop-filter: blur(7px); */
+
+  transform: translateX(100%);
+  transition: transform 200ms;
+
+  pointer-events: all;
+}
+
+.navbar.active {
+  transform: translateX(0);
+}
+
+.navbar_group {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar_external_links {
+  flex-flow: row nowrap;
+}
+
+.navbar_link_item {
+  font-family: 'Recursive', monospace;
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #ffffff;
+
+  position: relative;
+  transition: color 200ms;
+
+  cursor: pointer;
+}
+
+.navbar_link_item:hover {
+  color: #0d7ad3;
+}
+
+.navbar_section_links .navbar_link_item::before {
+  position: absolute;
+  content: '';
+
+  background-color: #0d7ad3;
+  border-radius: 100rem;
+
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  height: 0.25rem;
+
+  opacity: 0;
+
+  transition: opacity 200ms;
+}
+
+.navbar_section_links .navbar_link_item:hover::before {
+  opacity: 1;
+}
+
+/* Computer screens */
+@media screen and (min-width: 1200px) {
+  .navbar {
+    position: static;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+
+    z-index: inherit;
+
+    background: none;
+    border: none;
+
+    gap: 4rem;
+  }
+
+  .navbar_group {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+
+    gap: 2rem;
+  }
+
+  .navbar_group>a.navbar_link_item {
+    font-family: 'Recursive', monospace;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #ffffff;
+
+    position: relative;
+    transition: color 200ms;
+  }
+
+  .navbar_group>a.navbar_link_item:hover {
+    color: #0d7ad3;
+  }
+
+  .navbar_group.navbar_section_links a.navbar_link_item::before {
+    position: absolute;
+    content: '';
+
+    background-color: #0d7ad3;
+    border-radius: 100rem;
+
+    left: 0;
+    right: 0;
+    bottom: -0.5rem;
+    height: 0.25rem;
+
+    opacity: 0;
+
+    transition: opacity 200ms;
+  }
+
+  .navbar_group.navbar_section_links a.navbar_link_item:hover::before {
+    opacity: 1;
+  }
+}

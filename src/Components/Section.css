@@ -1,0 +1,39 @@
+.main_section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* 
+  The intro section will be 100 vh when entering the page 
+  other sections will keep their size but have a margin top
+  of 25svh for breathing room. 
+*/
+.section_intro {
+  min-height: 90dvh;
+}
+
+.main_section:not(:first-of-type) {
+  margin-top: 25svh;
+  padding-top: calc(var(--size-height-header));
+}
+
+.section_title {
+  font-family: 'Recursive monospace';
+  font-size: 1.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.section_title span {
+  display: block;
+  font-size: 1.5rem;
+  color: #0060ce;
+}
+
+.section_paragraph {
+  width: 100%;
+  font-family: 'Roboto';
+  font-size: 1.25rem;
+}

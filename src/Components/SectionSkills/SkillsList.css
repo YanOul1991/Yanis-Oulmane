@@ -1,0 +1,99 @@
+.skills_subsec {
+  margin-bottom: 5rem;
+}
+
+.skills_subsec_title {
+  font-size: 1.5rem;
+  margin: 0 auto 1rem 0;
+
+  text-align: center;
+  font-family: 'Recursive';
+}
+
+.skills_list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill_item {
+  position: relative;
+
+  width: 40svw;
+  aspect-ratio: 4 / 3;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  background: #1E293B;
+
+  gap: 1rem;
+  border-radius: 1rem;
+
+  border-width: 0.15rem;
+  border-style: solid;
+
+  transition: all 100ms;
+}
+
+/* .skill_item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: inherit;
+  border-radius: inherit;
+  filter: blur(0);
+  scale: 0.9;
+  z-index: -1;
+
+  transition: all 200ms;
+} */
+
+/* .skill_item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: #1E293B;
+  border-radius: inherit;
+  scale: 1;
+} */
+
+/* .skill_item:hover::after {
+  filter: blur(1px);
+  scale: 1.025;
+} */
+
+.skill_item_label {
+  font-size: 1.25rem;
+  font-weight: 900;
+  font-family: 'Recursive';
+  /* z-index: 1; */
+}
+
+.skill_item_bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  opacity: 0.2;
+}
+
+.skill_item_image {
+  height: 3rem;
+  z-index: 1;
+}

@@ -1,0 +1,35 @@
+.site_main {
+  margin: 0 auto;
+  color: white;
+}
+
+.background {
+  position: fixed;
+  top: calc(var(--size-height-header) - 0.15rem);
+  left: -0.15rem;
+  bottom: 0.15rem;
+  right: 0.15rem;
+
+  z-index: -9999;
+
+
+  /* GRID BACKGROUND */
+  background-size: 10svw 10svw;
+  background-image:
+    linear-gradient(to right, #00ccff 0.15rem, transparent 0.15rem),
+    linear-gradient(to bottom, #00ccff 0.15rem, transparent 0.15rem);
+
+  /* GRID BACKGROUND OPACITY */
+  mask-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.1) 15%,
+      rgba(0, 0, 0, 0.1) 85%,
+      rgba(0, 0, 0, 0.3) 100%);
+}
+
+.site_main > .content {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
