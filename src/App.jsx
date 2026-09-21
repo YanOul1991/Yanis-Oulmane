@@ -118,16 +118,19 @@ export default function App() {
       { label: "C", fileLogo: "c", bgStyle: "#00599c" },
       { label: "C++", fileLogo: "cpp", bgStyle: "#00599c" },
       { label: "C#", fileLogo: "cs", bgStyle: "#390091" },
-      { label: "HTML", fileLogo: "html", bgStyle: "#f16529" },
-      { label: "CSS", fileLogo: "css", bgStyle: "#2965f1" },
+      { label: "Slang", fileLogo: "slang", bgStyle: "#f66331" },
       { label: "JavaScript", fileLogo: "js", bgStyle: "#f7df1e" },
       { label: "PHP", fileLogo: "php", bgStyle: "#777bb3" },
+      { label: "HTML", fileLogo: "html", bgStyle: "#f16529" },
+      { label: "CSS", fileLogo: "css", bgStyle: "#2965f1" },
     ];
     const toolsList = [
       { label: "Unity Engine", fileLogo: "unity", bgStyle: " #808080" },
+      { label: "Unreal Engine", fileLogo: "unreal", bgStyle: " #1b1b1b" },
       { label: "Github", fileLogo: "github", bgStyle: "#ffffff" },
       { label: "Git", fileLogo: "git", bgStyle: "#f05133" },
       { label: "CMake", fileLogo: "cmake", bgStyle: "#3eae2b" },
+      { label: "Vulkan", fileLogo: "vulkan", bgStyle: "#ac162c" },
       { label: "React", fileLogo: "react", bgStyle: "#61dafb" },
     ];
 

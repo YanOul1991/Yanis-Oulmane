@@ -7,10 +7,16 @@ export default function Header() {
   const [displayNav, setDisplayNav] = useState(false);
 
   useEffect(() => {
-    if (displayNav == true) {
-      document.body.style.overflow = 'hidden';
-    } else {
+    // 1. Define your mobile breakpoint media query
+    if (window.matchMedia('(min-width: 1200px)').matches) {
       document.body.style.overflow = 'unset';
+    }
+    else {
+      if (displayNav == true) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'unset';
+      }
     }
     return () => {
       document.body.style.overflow = 'unset';

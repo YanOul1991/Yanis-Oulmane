@@ -87,8 +87,6 @@
 
 
 @media screen and (min-width: 1200px) {
-  /* .global_header {
-  } */
 
   .global_header .content {
     width: 65svw;
@@ -105,5 +103,9 @@
     font-family: 'Recursive', monospace;
     font-weight: 900;
     text-transform: uppercase;
+  }
+
+  .nav_menu_button {
+    display: none;
   }
 }

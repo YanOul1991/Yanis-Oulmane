@@ -82,20 +82,31 @@
 
 /* Computer screens */
 @media screen and (min-width: 1200px) {
+  .navbar_display_wrp {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    overflow: hidden;
+  }
+
   .navbar {
-    position: static;
+    width: 100%;
+    height: 100%;
+    background: none;
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 
-    z-index: inherit;
+    gap: 5rem;
+    /* backdrop-filter: blur(7px); */
 
-    background: none;
-    border: none;
+    transform: translateX(0);
+    transition: transform 200ms;
 
-    gap: 4rem;
+    pointer-events: all;
   }
 
   .navbar_group {
