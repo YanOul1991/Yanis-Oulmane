@@ -11,7 +11,7 @@ export default function Main({ sections }) {
       <div className="content">
         {/* The intro section is being render directly in this component as its simply a single paragraph*/}
         <section id="me" className="main_section section_intro">
-          <h2 className="section_title">Yanis Oulmane <span>Programmer,Software Engineer</span></h2>
+          <h2 className="section_title">Yanis Oulmane <span>Étudiant en génie logiciel</span></h2>
           <div className="section_paragraph">{introParaText}</div>
         </section> 
         { sections }
